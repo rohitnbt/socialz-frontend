@@ -4,6 +4,7 @@ import BackArrow from "../../images/icons/back-arrow.svg";
 import { BiImageAdd } from "react-icons/bi";
 import axios from "axios";
 import Cookies from 'js-cookie';
+import { BASE_URL } from "../../BASE_URL";
 
 export const EditProfile = () => {
   const [profileBanner, setProfileBanner] = useState(null);
@@ -44,7 +45,7 @@ export const EditProfile = () => {
     formData.append('profileBanner', profileBanner);
     formData.append('profilePicture', profilePicture);
     const id = stringifiedCookieData._id;
-    const response = await axios.patch(`http://localhost:5555/upload/${id}`, formData);
+    const response = await axios.patch(`${BASE_URL}/upload/${id}`, formData);
     setData(response.data);
     console.warn(data);
   }
