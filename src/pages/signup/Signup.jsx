@@ -11,6 +11,7 @@ import { HideShowPassword } from '../../components/hideShowPassword/HideShowPass
 import { UserIcon } from '../../components/Icons/UserIcon';
 import { MailIcon } from '../../components/Icons/MailIcon';
 import { LockIcon } from '../../components/Icons/LockIcon';
+import { BASE_URL } from '../../BASE_URL';
 
 export const SignUp = () => {
     const [cookieValue, setCookieValue] = useState('');
@@ -39,7 +40,7 @@ export const SignUp = () => {
         if(confirmPassword === formData.password)
         {
             try {
-                const response = await axios.post('http://localhost:5555/signup', formData);
+                const response = await axios.post(`${BASE_URL}/signup`, formData);
                 setCookieValue(response.data)
 
               } catch (error) {

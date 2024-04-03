@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { HideShowPassword } from '../../components/hideShowPassword/HideShowPassword';
 import { MailIcon } from '../../components/Icons/MailIcon';
 import { LockIcon } from '../../components/Icons/LockIcon';
+import { BASE_URL } from '../../BASE_URL';
 
 export const Login = () => {
     const [cookieValue, setCookieValue] = useState('');
@@ -34,7 +35,7 @@ export const Login = () => {
         e.preventDefault();
         
         try {
-            const response = await axios.post('http://localhost:5555/login', formData);
+            const response = await axios.post(`${BASE_URL}/login`, formData);
             setCookieValue(response.data);
           } catch (error) {
             console.warn(error);
