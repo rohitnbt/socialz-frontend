@@ -41,13 +41,14 @@ export const EditProfile = () => {
 
   const handleInfoSubmit = async(e) => {
     e.preventDefault();
-    console.warn(formData);
+    const id = stringifiedCookieData._id;
     formData.append('profileBanner', profileBanner);
     formData.append('profilePicture', profilePicture);
-    const id = stringifiedCookieData._id;
+    formData.append('userid', id);
     const response = await axios.patch(`${BASE_URL}/upload/${id}`, formData);
     setData(response.data);
     console.warn(data);
+    console.warn(formData);
   }
   
   return (
