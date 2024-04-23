@@ -58,12 +58,9 @@ export const Login = () => {
         <div className="Content-box">
             <img src={logo} alt="" />
             <p>
-                  <b>Register For Free</b> for access to connection, creativity,
-                  and community within adult social media. A place to inspire your
-                  fantasies and discover new ones as well.
-               </p>
-
-               <h5>Join Us And Take It Off</h5>
+                <b>Register For Free</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus maiores quidem perferendis magnam nesciunt suscipit sequi quas ratione. Est, accusantium!.
+            </p>
+            <h5>Join Us And Be Social</h5>
         </div>
         <div className="login-box">
             <form onSubmit={handleSubmit}>

@@ -27,7 +27,7 @@ export const RightSideMenu = () => {
       (currentPath === "/login" || currentPath === "/signup" || currentPath === "/messages") ? "": (<div className='rightSideMenu'>
       <div className='rightSideContent'>
         <div className="header">
-          <LocalStorage />
+          {/* <LocalStorage /> */}
           <ul>
             <li onClick={()=>setCurrentMenu("/")}><HomeIcon currentPath={currentMenu}/></li>
             <li onClick={()=>setCurrentMenu("/messages")}><MessagesIcon currentPath={currentMenu}/></li>
