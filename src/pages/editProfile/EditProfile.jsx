@@ -62,7 +62,7 @@ export const EditProfile = () => {
         <form onSubmit={handleInfoSubmit}>
           <div className="profile-header">
             <div className="banner-box">
-              <img src={data.profileBanner ? `http://localhost:5555/images/${data.profileBanner}` : "https://demourls.xyz/Pulse-development/img/Maskgroup-new.png"} alt="" /> {/* Use profileBanner directly */}
+              <img src={profileBanner ? URL.createObjectURL(profileBanner) : "https://demourls.xyz/Pulse-development/img/Maskgroup-new.png"} alt="" /> {/* Use profileBanner directly */}
               <div className="upload-btn">
                 <input type="file" name="banner" ref={bannerRef} onChange={handleBannerUpload} />
                 <BiImageAdd onClick={bannerUpload} />
@@ -72,7 +72,7 @@ export const EditProfile = () => {
               <div className="profile-box">
                 <div className="profile">
                   <img
-                    src={data.profilePicture ? `http://localhost:5555/images/${data.profilePicture}` :"https://demourls.xyz/Pulse-development/img/gal5.png"}
+                    src={profilePicture ? URL.createObjectURL(profilePicture) :"https://demourls.xyz/Pulse-development/img/gal5.png"}
                     alt=""
                   />
                     <div className="upload-btn">
