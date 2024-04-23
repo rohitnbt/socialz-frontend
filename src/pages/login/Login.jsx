@@ -69,7 +69,7 @@ export const Login = () => {
                     <MailIcon />
                 </div>
                 <div className="input-field">
-                    <input type={showPassword ? "text" : "password"} value={formData.password} placeholder='password' name='password' value={formData.password} onChange={handleInputChange} />
+                    <input type={showPassword ? "text" : "password"} value={formData.password} onChange={handleInputChange} />
                     <div className="show-password" onClick={()=>setShowPassword(!showPassword)}>
                         <HideShowPassword showPassword={showPassword}/>
                     </div>
